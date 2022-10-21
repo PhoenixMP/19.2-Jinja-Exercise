@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>MadLibs Form</h1>
+<form action="/story" , id="{{story}}">
+    {% for word in words%}
+    <p>
+        <label for="">{{word}}:</label>
+        <input type="text" placeholder="enter {{word}}" name="{{word}}">
+    </p>
+    {% endfor %}
+    <button>Submit!</button>
+</form>
+{% endblock %}
